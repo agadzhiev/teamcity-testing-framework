@@ -7,16 +7,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class User extends BaseModel{
+public class Project extends BaseModel {
+    @Random
     private String id;
     @Random
-    private String username;
-    @Random
-    private String password;
-    private Roles roles;
+    private String name;
+    private String locator;
 }
