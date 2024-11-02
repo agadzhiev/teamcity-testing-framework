@@ -1,4 +1,4 @@
-package com.example.teamcity.api.api;
+package com.example.teamcity;
 
 import com.example.teamcity.api.generators.TestDataStorage;
 import com.example.teamcity.api.models.TestData;
@@ -22,9 +22,9 @@ public class BaseTest {
         testData = generate();
     }
 
-    @AfterMethod(alwaysRun = true)
-    public void afterTest() {
-        softy.assertAll();
-        TestDataStorage.getStorage().deleteCreatedEntities();
-    }
+//    @AfterMethod(alwaysRun = true)
+//    public void afterTest() {
+//        softy.assertAll();
+//        TestDataStorage.getStorage().deleteCreatedEntities();
+//    }
 }

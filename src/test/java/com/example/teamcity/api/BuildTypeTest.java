@@ -1,4 +1,4 @@
-package com.example.teamcity.api.api;
+package com.example.teamcity.api;
 
 
 import  com.example.teamcity.api.models.BuildType;
@@ -17,7 +17,7 @@ import static com.example.teamcity.api.enums.Endpoint.*;
 import static com.example.teamcity.api.generators.TestDataGenerator.generate;
 import static io.qameta.allure.Allure.step;
 
-public class BuildTypeTest extends BaeApiTest{
+public class BuildTypeTest extends BaseApiTest {
     @Test(description = "User should be able to create build type", groups = {"Positive", "CRUD"})
     public void userCreatesBuildTypeTest(){
         superUserCheckRequests.getRequest(USERS).create(testData.getUser());
