@@ -11,14 +11,15 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.target>20</maven.compiler.target>
-        <maven.compiler.source>20</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
         <aspectj.version>1.9.22</aspectj.version>
         <allure.version>2.27.0</allure.version>
         <rest-assured.version>5.1.1</rest-assured.version>
         <lombok.version>1.18.30</lombok.version>
         <jackson.version>2.17.2</jackson.version>
         <selenide.version>7.4.3</selenide.version>
+        <swagger-coverage-version>1.5.0</swagger-coverage-version>
     </properties>
 
     <dependencies>
@@ -81,6 +82,11 @@
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
             <version>${selenide.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.viclovsky</groupId>
+            <artifactId>swagger-coverage-rest-assured</artifactId>
+            <version>${swagger-coverage-version}</version>
         </dependency>
     </dependencies>
     <build>
