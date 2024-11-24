@@ -2,6 +2,7 @@ package com.example.teamcity.ui.pages;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -19,6 +20,7 @@ public class CreateBuildConfigurationPage extends BasePage {
         return Selenide.open(String.format(CREATE_BUILD_CONFIG_URL, projectId), CreateBuildConfigurationPage.class);
     }
 
+    @Step("Create manually build configuration")
     public void createManuallyBuildConfiguration(String name, String buildConfigurationId, String description) {
         manuallyButton.click();
         buildTypeNameInput.val(name);

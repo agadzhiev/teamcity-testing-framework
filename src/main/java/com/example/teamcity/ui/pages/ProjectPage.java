@@ -3,6 +3,7 @@ package com.example.teamcity.ui.pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 import java.time.Duration;
@@ -16,11 +17,12 @@ public class ProjectPage extends BasePage {
     private static final String BUILD_CONFIG_LOCATOR_TEMPLATE = "//td[contains(@class, 'name highlight') and contains(., '%s')]";
     private static final String ADMIN_PROJECT_URL_TEMPLATE = "/admin/editProject.html?projectId=%s";
 
-
+    @Step("Open project page")
     public static ProjectPage open(String projectId) {
         return Selenide.open(PROJECT_URL.formatted(projectId), ProjectPage.class);
     }
 
+    @Step("Open edit page")
     public static ProjectPage openEditPage(String projectId) {
         return Selenide.open(ADMIN_PROJECT_URL_TEMPLATE.formatted(projectId), ProjectPage.class);
     }
