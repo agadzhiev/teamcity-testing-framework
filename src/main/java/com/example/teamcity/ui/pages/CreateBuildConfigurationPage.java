@@ -23,9 +23,9 @@ public class CreateBuildConfigurationPage extends BasePage {
     @Step("Create manually build configuration")
     public void createManuallyBuildConfiguration(String name, String buildConfigurationId, String description) {
         manuallyButton.shouldBe(Condition.visible, BASE_WAITING).click();
-        buildTypeNameInput.val(name);
-        buildConfigurationIdInput.val(buildConfigurationId);
-        descriptionInput.val(description);
+        buildTypeNameInput.shouldBe(Condition.visible, BASE_WAITING).val(name);
+        buildConfigurationIdInput.shouldBe(Condition.visible, BASE_WAITING).val(buildConfigurationId);
+        descriptionInput.shouldBe(Condition.visible, BASE_WAITING).val(description);
         createButton.click();
     }
 }
