@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Mon Nov 25 09:00:50 GMT 2024","Mon Nov 25 09:01:35 GMT 2024","45034","Surefire suite","Surefire test","com.example.teamcity.ui.CreateBuildConfigurationTest","com.example.teamcity.ui.CreateBuildConfigurationTest","userCreatesProject","User should be able to create build configuration",""
+"passed","Mon Nov 25 08:59:44 GMT 2024","Mon Nov 25 09:00:37 GMT 2024","53205","Surefire suite","Surefire test","com.example.teamcity.ui.SetupServerTest","com.example.teamcity.ui.SetupServerTest","setupTeamCityServerTest","setupTeamCityServerTest",""
+"passed","Mon Nov 25 09:01:36 GMT 2024","Mon Nov 25 09:01:59 GMT 2024","23899","Surefire suite","Surefire test","com.example.teamcity.ui.CreateProjectTest","com.example.teamcity.ui.CreateProjectTest","userCreatesProject","User should be able to create project",""
