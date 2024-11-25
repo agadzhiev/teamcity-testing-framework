@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class CreateBuildConfigurationPage extends BasePage {
     private static final String CREATE_BUILD_CONFIG_URL = "/admin/createObjectMenu.html?projectId=%s&showMode=createBuildTypeMenu";
 
-    private final SelenideElement manuallyButton = $("a[href='#createManually']");
+    private final SelenideElement manuallyButton = $(".createOption.readyToUseOption.expanded");
     private final SelenideElement buildTypeNameInput = $("#buildTypeName");
     private final SelenideElement buildConfigurationIdInput = $("#buildTypeExternalId");
     private final SelenideElement descriptionInput = $("#description");
