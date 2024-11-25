@@ -1,11 +1,11 @@
 package com.example.teamcity.ui.pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
 
 public class CreateBuildConfigurationPage extends BasePage {
     private static final String CREATE_BUILD_CONFIG_URL = "/admin/createObjectMenu.html?projectId=%s&showMode=createBuildTypeMenu";
@@ -22,7 +22,7 @@ public class CreateBuildConfigurationPage extends BasePage {
 
     @Step("Create manually build configuration")
     public void createManuallyBuildConfiguration(String name, String buildConfigurationId, String description) {
-        manuallyButton.click();
+        manuallyButton.shouldBe(Condition.visible, BASE_WAITING).click();
         buildTypeNameInput.val(name);
         buildConfigurationIdInput.val(buildConfigurationId);
         descriptionInput.val(description);
